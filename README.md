@@ -18,6 +18,6 @@
 
 
 ** deployment
-1. run 'ng build --prod' (it will create build folder named 'dist').
+1. run 'ng build --prod' or 'npm run build' (it will create build folder named 'dist').
 2. deploy build folder to destination server.
 
