@@ -1,0 +1,14 @@
+﻿<h1>Hi <strong>{{currentUser.firstName}}</strong>,</h1>
+<h3>Welcome to your profile page!</h3>
+<br /><br />
+<h4>Fullname: <strong>{{currentUser.firstName}} {{currentUser.lastName}}</strong></h4>
+<h4>email address: <strong>{{currentUser.username}}</strong></h4>
+<br /> <br />
+<h5>List of users:</h5>
+<br />
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}}) <strong *ngIf="currentUser.username === user.username">current user</strong>
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul>
